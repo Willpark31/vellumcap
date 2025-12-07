@@ -3,98 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vellum Capital Partners | Nationwide CRE Finance</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<title>Vellum Capital Partners | Nationwide Commercial Finance</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #d4af37;
-    --dark: #0a0a0a;
-    --charcoal: #111111;
-  }
+  :root { --gold: #d4a3c2b; --text: #1a1a1a; --light: #faf9f6; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    background: var(--dark);
-    color: var(--gold);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+  body { font-family: 'Inter', sans-serif; background:#faf9f6; color:var(--light); color:var(--text); line-height:1.6; }
+  
   .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1486406146922-9a3ee88a21b9?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+    height:100vh;
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url('https://images.unsplash.com/photo-1486406146922-9a3ee88a21b9?ixlib=rb-4.0.3&auto=format&fit=crop&q=90') center/cover no-repeat;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px;
   }
   .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 10vw, 120px);
-    font-weight: 600;
-    letter-spacing: 8px;
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(60px, 10vw, 130px);
+    font-weight:600;
+    color: var(--gold);
+    letter-spacing: 6px;
+    margin-bottom:8px;
   }
   .tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(24px, 5vw, 48px);
-    font-weight: 400;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 6vw, 56px);
+    color: var(--gold);
+    margin-bottom:20px;
   }
   .subhead {
-    font-size: 22px;
-    margin: 30px 0 60px;
-    opacity: 0.85;
+    font-size:22px;
+    max-width:800px;
+    margin:0 auto 50px;
   }
+  
   .products {
-    padding: 100px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    padding:120px 5%;
+    max-width:1400px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(340px,1fr));
+    gap:40px;
   }
   .card {
-    background: var(--charcoal);
-    border: 1px solid var(--gold);
-    padding: 40px 30px;
-    border-radius: 0;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background:white;
+    padding:50px 30px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .card:hover {
-    transform: translateY(-8px, -8px);
-    box-shadow: 8px 8px 0 var(--gold);
-  }
+  .card:hover { transform:translateY(-12px); box-shadow:0 20px 40px rgba(0,0,0,0.12); }
   .card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    margin-bottom: 12px;
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    color:var(--gold);
+    margin-bottom:16px;
   }
+  
   .cta {
-    display: inline-block;
-    background: var(--gold);
-    color: #000;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 20px 60px;
-    margin: 80px 0;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: all 0.3s;
+    display:inline-block;
+    background:var(--gold);
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    padding:20px 60px;
+    border-radius:50px;
+    text-decoration:none;
+    margin:60px 0 100px;
+    box-shadow:0 8px 25px rgba(74,60,43,0.3);
+    transition:0.3s;
   }
-  .cta:hover { background: #fff; color: #000; }
+  .cta:hover { background:#3a2f22; transform:translateY(-3px); }
+  
   .footer {
-    background: var(--charcoal);
-    padding: 60px 20px;
-    font-size: 18px;
+    background:#1a1a1a;
+    color:#aaa;
+    padding:60px 20px;
+    text-align:center;
+    font-size:17px;
   }
-  @media (max-width: 768px) {
-    .hero { height: 90vh; }
-    .products { padding: 60px 5%; gap: 30px; }
-  }
+  .footer a { color:#d4af37; text-decoration:none; }
 </style>
 </head>
 <body>
@@ -102,16 +89,16 @@
 <section class="hero">
   <div class="logo">VELLUM</div>
   <div class="tagline">CAPITAL PARTNERS</div>
-  <div class="subhead">$1M – $250M | Nationwide | 24–48 Hour Term Sheets</div>
+  <div class="subhead">Nationwide Commercial Real Estate Finance<br>$1M – $250M | 24–48 Hour Term Sheets</div>
 </section>
 
 <section class="products">
-  <div class="card"><h3>SBA 7(a) & 504</h3>Up to 90 % LTV | 25-Year Fully Amortizing</div>
-  <div class="card"><h3>Hotel Bridge & Acquisition</h3>Non-Recourse | Cash-Out | Franchised & Independent</div>
-  <div class="card"><h3>Gas Station / C-Store</h3>90 % SBA | Fuel Brand Flexible | Phase I Ready</div>
-  <div class="card"><h3>Multifamily</h3>Agency | Conventional | Value-Add Bridge</div>
-  <div class="card"><h3>Construction / Ground-Up</h3>Spec | Pre-Sold | Residential & Commercial</div>
-  <div class="card"><h3>Bridge | Mezz | Pref Equity</h3>65–85 % LTC | 12–36 Months | Quick Close</div>
+  <div class="card"><h3>SBA 7(a) & 504</h3>Up to 90% LTV | 25-Year Fully Amortizing</div>
+  <div class="card"><h3>Hotel Bridge & Acquisition</h3>Franchised & Independent | Cash-Out OK</div>
+  <div class="card"><h3>Gas Station / C-Store</h3>90% SBA | Fuel Brand Flexible</div>
+  <div class="card"><h3>Multifamily</h3>Fannie · Freddie · Bridge · Conventional</div>
+  <div class="card"><h3>Construction / Ground-Up</h3>Spec & Pre-Sold | Residential & Commercial</div>
+  <div class="card"><h3>Bridge · Mezz · Pref Equity</h3>65–85% LTC | 12–36 Months</div>
 </section>
 
 <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">GET TERM SHEET IN 24 HOURS</a>
@@ -119,8 +106,7 @@
 <div class="footer">
   Will Parker<br>
   Founder & Managing Director<br><br>
-  Direct: (___) ___-____<br>
-  willparker@vellumcap.com
+  Direct: (___) ___-____ | <a href="mailto:willparker@vellumcap.com">willparker@vellumcap.com</a>
 </div>
 
 </body>
