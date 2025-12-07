@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellum Capital Partners</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #d4af37; /* Gold color */
+            text-align: center;
+        }
+        .hero {
+            padding: 50px 20px;
+        }
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .subhead {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        .product-box {
+            background-color: #1a1a1a;
+            border: 1px solid #d4af37;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .cta-button {
+            background-color: #d4af37;
+            color: #000000;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">VELLUM CAPITAL PARTNERS</div>
+        <div class="tagline">Partnering Capital with Opportunity</div>
+        <div class="subhead">$1M – $250M | Nationwide | 24–48 Hour Term Sheets</div>
+    </div>
+
+    <div class="products">
+        <div class="product-box">SBA 7(a) & 504 Loans</div>
+        <div class="product-box">Hotel Bridge & Acquisition</div>
+        <div class="product-box">Gas Station / C-Store Financing</div>
+        <div class="product-box">Multifamily Agency / Conventional</div>
+        <div class="product-box">Construction / Ground-Up</div>
+        <div class="product-box">Bridge / Mezzanine / Preferred Equity</div>
+    </div>
+
+    <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta-button" target="_blank">Get Term Sheet in 24 Hours</a>
+
+    <div class="footer">
+        Will Parker | Founder & Managing Director<br>
+        Direct: (___) ___-____ | willparker@vellumcap.com
+    </div>
+</body>
+</html>
