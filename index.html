@@ -1,113 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vellum Capital Partners | Nationwide Commercial Finance</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  :root { --gold: #d4a3c2b; --text: #1a1a1a; --light: #faf9f6; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: 'Inter', sans-serif; background:#faf9f6; color:var(--light); color:var(--text); line-height:1.6; }
-  
-  .hero {
-    height:100vh;
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-                url('https://images.unsplash.com/photo-1486406146922-9a3ee88a21b9?ixlib=rb-4.0.3&auto=format&fit=crop&q=90') center/cover no-repeat;
-    display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px;
-  }
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(60px, 10vw, 130px);
-    font-weight:600;
-    color: var(--gold);
-    letter-spacing: 6px;
-    margin-bottom:8px;
-  }
-  .tagline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 6vw, 56px);
-    color: var(--gold);
-    margin-bottom:20px;
-  }
-  .subhead {
-    font-size:22px;
-    max-width:800px;
-    margin:0 auto 50px;
-  }
-  
-  .products {
-    padding:120px 5%;
-    max-width:1400px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(340px,1fr));
-    gap:40px;
-  }
-  .card {
-    background:white;
-    padding:50px 30px;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover { transform:translateY(-12px); box-shadow:0 20px 40px rgba(0,0,0,0.12); }
-  .card h3 {
-    font-family:'Playfair Display',serif;
-    font-size:28px;
-    color:var(--gold);
-    margin-bottom:16px;
-  }
-  
-  .cta {
-    display:inline-block;
-    background:var(--gold);
-    color:white;
-    font-size:22px;
-    font-weight:600;
-    padding:20px 60px;
-    border-radius:50px;
-    text-decoration:none;
-    margin:60px 0 100px;
-    box-shadow:0 8px 25px rgba(74,60,43,0.3);
-    transition:0.3s;
-  }
-  .cta:hover { background:#3a2f22; transform:translateY(-3px); }
-  
-  .footer {
-    background:#1a1a1a;
-    color:#aaa;
-    padding:60px 20px;
-    text-align:center;
-    font-size:17px;
-  }
-  .footer a { color:#d4af37; text-decoration:none; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellum Capital Partners | Nationwide CRE Finance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --text: #2c2c2c; --light: #f8f5f0; --accent: #e0d8c8; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--text); line-height: 1.7; }
+        .hero { height: 100vh; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .logo { font-family: 'Playfair Display', serif; font-size: clamp(50px, 8vw, 100px); font-weight: 600; color: var(--gold); letter-spacing: 4px; margin-bottom: 8px; }
+        .tagline { font-family: 'Playfair Display', serif; font-size: clamp(24px, 4vw, 40px); color: var(--gold); margin-bottom: 15px; }
+        .subhead { font-size: 20px; max-width: 700px; opacity: 0.9; }
+        .tabs { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .tab-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+        .tab-btn { background: var(--accent); color: var(--text); padding: 12px 24px; border: none; border-radius: 25px; cursor: pointer; font-size: 16px; transition: all 0.3s; }
+        .tab-btn.active { background: var(--gold); color: white; }
+        .tab-content { display: none; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+        .tab-content.active { display: block; }
+        .tab-content h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--gold); margin-bottom: 20px; text-align: center; }
+        .tab-content ul { list-style: none; text-align: left; max-width: 800px; margin: 0 auto; }
+        .tab-content li { padding: 10px 0; border-bottom: 1px solid var(--accent); }
+        .cta { display: inline-block; background: var(--gold); color: white; font-size: 20px; font-weight: 600; padding: 16px 40px; border-radius: 30px; text-decoration: none; margin: 40px auto; display: block; width: fit-content; transition: 0.3s; }
+        .cta:hover { background: #b8942f; transform: translateY(-2px); }
+        .footer { background: #2c2c2c; color: #ddd; padding: 40px 20px; text-align: center; font-size: 16px; }
+        @media (max-width: 768px) { .tab-nav { flex-direction: column; align-items: center; } .tab-content { padding: 20px; } }
+    </style>
 </head>
 <body>
+    <section class="hero">
+        <div class="logo">VELLUM</div>
+        <div class="tagline">CAPITAL PARTNERS</div>
+        <div class="subhead">Nationwide Commercial Real Estate Finance<br>$1M – $250M | 24–48 Hour Term Sheets | Competitive Rates & Terms</div>
+    </section>
 
-<section class="hero">
-  <div class="logo">VELLUM</div>
-  <div class="tagline">CAPITAL PARTNERS</div>
-  <div class="subhead">Nationwide Commercial Real Estate Finance<br>$1M – $250M | 24–48 Hour Term Sheets</div>
-</section>
+    <section class="tabs">
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'sba')">SBA 7(a) & 504</button>
+            <button class="tab-btn" onclick="openTab(event, 'hotel')">Hotel Bridge & Acquisition</button>
+            <button class="tab-btn" onclick="openTab(event, 'gas')">Gas Station / C-Store</button>
+            <button class="tab-btn" onclick="openTab(event, 'multifamily')">Multifamily</button>
+            <button class="tab-btn" onclick="openTab(event, 'construction')">Construction</button>
+            <button class="tab-btn" onclick="openTab(event, 'bridge')">Bridge / Mezz / Pref Equity</button>
+        </div>
 
-<section class="products">
-  <div class="card"><h3>SBA 7(a) & 504</h3>Up to 90% LTV | 25-Year Fully Amortizing</div>
-  <div class="card"><h3>Hotel Bridge & Acquisition</h3>Franchised & Independent | Cash-Out OK</div>
-  <div class="card"><h3>Gas Station / C-Store</h3>90% SBA | Fuel Brand Flexible</div>
-  <div class="card"><h3>Multifamily</h3>Fannie · Freddie · Bridge · Conventional</div>
-  <div class="card"><h3>Construction / Ground-Up</h3>Spec & Pre-Sold | Residential & Commercial</div>
-  <div class="card"><h3>Bridge · Mezz · Pref Equity</h3>65–85% LTC | 12–36 Months</div>
-</section>
+        <div id="sba" class="tab-content active">
+            <h2>SBA 7(a) & 504 Loans</h2>
+            <ul>
+                <li><strong>Use of Proceeds:</strong> Acquisition, refinance, working capital for owner-occupied CRE (up to 90% LTV).</li>
+                <li><strong>Terms:</strong> 10–25 years amortizing; variable/fixed rates est. 9–10.5% (Prime +2–2.5%).</li>
+                <li><strong>Eligibility:</strong> For-profit U.S. businesses; 680+ FICO; 1.25x DSCR; $500K–$5M typical.</li>
+                <li><strong>Why Vellum:</strong> 45–60 day closes; no upfront fees under $1M; nationwide with top SBA lenders like Celtic/Live Oak.</li>
+            </ul>
+            <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">Apply for SBA Loan</a>
+        </div>
 
-<a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">GET TERM SHEET IN 24 HOURS</a>
+        <div id="hotel" class="tab-content">
+            <h2>Hotel Bridge & Acquisition</h2>
+            <ul>
+                <li><strong>Use of Proceeds:</strong> Purchase, refinance, cash-out for limited/full-service hotels (75–85% LTV).</li>
+                <li><strong>Terms:</strong> 2–5 years interest-only; rates 7.5–9.5%; up to 30-year amort on perm takeout.</li>
+                <li><strong>Eligibility:</strong> 70%+ occupancy; RevPAR $80+; flagged preferred; $2M–$50M.</li>
+                <li><strong>Why Vellum:</strong> Fast bridge to agency; PIP funding; partners like East West/Live Oak for 30-day execution.</li>
+            </ul>
+            <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">Apply for Hotel Financing</a>
+        </div>
 
-<div class="footer">
-  Will Parker<br>
-  Founder & Managing Director<br><br>
-  Direct: (___) ___-____ | <a href="mailto:willparker@vellumcap.com">willparker@vellumcap.com</a>
-</div>
+        <div id="gas" class="tab-content">
+            <h2>Gas Station / C-Store Financing</h2>
+            <ul>
+                <li><strong>Use of Proceeds:</strong> Acquisition/refi for branded c-stores w/gas (90% LTV SBA).</li>
+                <li><strong>Terms:</strong> 25 years; rates 9–10.5%; fuel volume $1M+/yr inside sales $500K+.</li>
+                <li><strong>Eligibility:</strong> Clean Phase I ESA; 1.25x DSCR; $1M–$5M; nationwide.</li>
+                <li><strong>Why Vellum:</strong> UST risk mitigation; top SBA partners (Celtic/Readycap); 45-day closes.</li>
+            </ul>
+            <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">Apply for Gas Station Loan</a>
+        </div>
 
+        <div id="multifamily" class="tab-content">
+            <h2>Multifamily Agency / Conventional</h2>
+            <ul>
+                <li><strong>Use of Proceeds:</strong> Acquisition/refi for 5+ units (80–95% LTV agency).</li>
+                <li><strong>Terms:</strong> 30 years fixed; rates 6–8%; non-recourse options.</li>
+                <li><strong>Eligibility:</strong> 1.25x DSCR; 85%+ occupancy; $3M–$100M.</li>
+                <li><strong>Why Vellum:</strong> Fannie/Freddie speed; bridge to perm; partners like Walker/Greystone.</li>
+            </ul>
+            <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">Apply for Multifamily Loan</a>
+        </div>
+
+        <div id="construction" class="tab-content">
+            <h2>Construction / Ground-Up</h2>
+            <ul>
+                <li><strong>Use of Proceeds:</strong> Spec/pre-sold builds (70–80% LTC).</li>
+                <li><strong>Terms:</strong> 12–24 months draw; rates 8–10%; convert to perm.</li>
+                <li><strong>Eligibility:</strong> Experienced GC; plans/appraisals; $2M–$20M.</li>
+                <li><strong>Why Vellum:</strong> Fast draws; SBA 504 for owner-occ; nationwide lenders.</li>
+            </ul>
+            <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">Apply for Construction Loan</a>
+        </div>
+
+        <div id="bridge" class="tab-content">
+            <h2>Bridge / Mezz / Preferred Equity</h2>
+            <ul>
+                <li><strong>Use of Proceeds:</strong> Transitional financing (65–85% LTC).</li>
+                <li><strong>Terms:</strong> 12–36 months; rates 9–12%; equity-like structures.</li>
+                <li><strong>Eligibility:</strong> Value-add plays; 1.2x DSCR post-stab; $5M+.</li>
+                <li><strong>Why Vellum:</strong> Flexible mezz stacks; quick 21-day closes; debt fund partners.</li>
+            </ul>
+            <a href="https://www.dropbox.com/request/hT4pQ7vR8sU9wX2mK3nL" class="cta" target="_blank">Apply for Bridge Loan</a>
+        </div>
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+    <footer class="footer">
+        Will Parker | Founder & Managing Director | Direct: (___) ___-____ | willparker@vellumcap.com
+    </footer>
 </body>
 </html>
